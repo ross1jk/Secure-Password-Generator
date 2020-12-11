@@ -8,7 +8,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+ }
 
   //var passwordChar = [];
   //for (var i = 8; 8<= N;) {
@@ -27,34 +27,41 @@ function writePassword() {
   numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
   special = ["~", "%"]
 
+  
  //Password Criteria through prompt:
  //How many characters do you want 8 - 128 charcters = length
-   console.log(passwordChar);
-  // if { passwordChar >= } 
-    //if { <= 128 };
-    //else {
-      //alert("Your character selection does not meet secure password requirements. Must be between 8 - 128 characters.");
-    //}
+   
+    if (passwordChar <= 7) {
+      alert("Your password length does not meet security requirements!");
+    }
+    else if (passwordChar >= 129) {
+      alert("Your password length does not meet security requirements!");
+    }
+    else {
+      console.log(passwordChar); 
+    }
+ 
   //need conditional
  //Do you want lowercase
   
-  if (confirmLowercase){
+   if (confirmLowercase) {
     console.log(lowercase[Math.floor(Math.random() * lowercase.length)]);
-  }
-  //need conditional
-  //Do you want uppercase
+   }
+   //need conditional
+   //Do you want uppercase
   
-    if (confirmUppercase){
+    if (confirmUppercase) {
       console.log(uppercase[Math.floor(Math.random() * uppercase.length)]);
     }
-  //need conditional
- //Do you want numeric 
+   //need conditional
+   //Do you want numeric 
   
     if (confirmNumeric) {
       console.log(numeric[Math.floor(Math.random() * numeric.length)]);
     }
-  //need conditional
- //Do you want special 
+    
+    //need conditional
+    //Do you want special 
   
     if (confirmSpecial) {
       console.log(special[Math.floor(Math.random() * special.length)]);
