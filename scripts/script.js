@@ -42,7 +42,7 @@ function writePassword() {
     } 
 
    // "drewjason" + "cat" -- want to do contintinously while adding a letter 
-  completePassword = lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)];
+  completePassword = lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)] + numeric[Math.floor(Math.random() * numeric.length)] + special[Math.floor(Math.random() * special.length)];
   console.log(completePassword);
 
    //Password Criteria through prompt:
