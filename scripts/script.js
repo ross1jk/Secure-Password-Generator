@@ -13,7 +13,6 @@ function writePassword() {
  
   //Varibles 
   var completePassword = "";
-  var passwordLength = 0;
   var chooseLength = prompt("How many characters do you want your password to have (must be between 8 - 128)?"); 
   var confirmLowercase = confirm("Do you want lowercase letteres?");
   var confirmUppercase = confirm("Do you want uppercase letters?");
@@ -27,40 +26,47 @@ function writePassword() {
 
 
   // function 
-  function reWriteStats() {
-    console.log(lowercase[Math.floor(Math.random() * lowercase.length)]);
-    console.log(uppercase[Math.floor(Math.random() * uppercase.length)]);
-    console.log(numeric[Math.floor(Math.random() * numeric.length)]);
-    console.log(special[Math.floor(Math.random() * special.length)]);
-  }
+  //function reWriteStats() {
+    //console.log(lowercase[Math.floor(Math.random() * lowercase.length)]);
+    //console.log(uppercase[Math.floor(Math.random() * uppercase.length)]);
+    //console.log(numeric[Math.floor(Math.random() * numeric.length)]);
+    //console.log(special[Math.floor(Math.random() * special.length)]);
+ // }
     //Password Lenght Choices:
     if (chooseLength < 8 && chooseLength > 128) {
       alert("Your password length does not meet security requirements!");
     }
-    else {
-      chooseLength = passwordLength
-    } 
+
+    console.log(chooseLength); 
+    
 
    // "drewjason" + "cat" -- want to do contintinously while adding a letter 
-  completePassword = lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)] + numeric[Math.floor(Math.random() * numeric.length)] + special[Math.floor(Math.random() * special.length)];
-  console.log(completePassword);
+   //completePassword = lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)] + numeric[Math.floor(Math.random() * numeric.length)] + special[Math.floor(Math.random() * special.length)];
+   //console.log(completePassword);
 
    //Password Criteria through prompt:
       //can use an array to randomize this
-      //for or while loop to complete 
+      
+      var i;  
+      for(i = 0; i < chooseLength; i++) {
+        console.log("this is stupid"); 
         if (confirmLowercase) {
-          lowercase = reWriteStats();
+          //lowercase = reWriteStats();
+          console.log(lowercase[Math.floor(Math.random() * lowercase.length)]); 
         }
-        else if (confirmUppercase) {
-          uppecase = reWriteStats();
+        if (confirmUppercase) {
+          //uppecase = reWriteStats();
+          console.log(uppercase[Math.floor(Math.random() * uppercase.length)]);
         }
-        else if (confirmNumeric) {
-          numeric = reWriteStats();
+        if (confirmNumeric) {
+          //numeric = reWriteStats();
+          console.log(numeric[Math.floor(Math.random() * numeric.length)]);
         }
-        else if (confirmSpecial) {
-          speical = reWriteStats();
+        if (confirmSpecial) {
+          //speical = reWriteStats();
+          console.log(special[Math.floor(Math.random() * special.length)]);
         }
-     // }
+     }
 
     //Character Lengths
      
