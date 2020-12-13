@@ -26,58 +26,63 @@ function writePassword() {
 
 
   // function 
-  //function reWriteStats() {
-    //console.log(lowercase[Math.floor(Math.random() * lowercase.length)]);
-    //console.log(uppercase[Math.floor(Math.random() * uppercase.length)]);
-    //console.log(numeric[Math.floor(Math.random() * numeric.length)]);
-    //console.log(special[Math.floor(Math.random() * special.length)]);
- // }
+   //function reWriteStats() {
+    //console.log(lowercase[Math.floor(Math.random() * lowercase.length)]); + console.log(uppercase[Math.floor(Math.random() * uppercase.length)]); + console.log(numeric[Math.floor(Math.random() * numeric.length)]); + console.log(special[Math.floor(Math.random() * special.length)]);
+    //completePassword = lowercase + uppercase + numeric + special }
+    //}
     //Password Lenght Choices:
-    if (chooseLength < 8 && chooseLength > 128) {
+    if (chooseLength < 8 || chooseLength > 128) {
       alert("Your password length does not meet security requirements!");
     }
 
-    console.log(chooseLength); 
+    //console.log(chooseLength); 
     
-
-   // "drewjason" + "cat" -- want to do contintinously while adding a letter 
-   //completePassword = lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)] + numeric[Math.floor(Math.random() * numeric.length)] + special[Math.floor(Math.random() * special.length)];
-   //console.log(completePassword);
 
    //Password Criteria through prompt:
       //can use an array to randomize this
-      
+    
       var i;  
       for(i = 0; i < chooseLength; i++) {
-        console.log("this is stupid"); 
         if (confirmLowercase) {
-          //lowercase = reWriteStats();
-          console.log(lowercase[Math.floor(Math.random() * lowercase.length)]); 
+         // lowercase = reWriteStats();
+          //completePassword = "" + lowercase[Math.floor(Math.random() * lowercase.length)];
+          completePassword = completePassword + lowercase[Math.floor(Math.random() * lowercase.length)]; 
         }
         if (confirmUppercase) {
           //uppecase = reWriteStats();
-          console.log(uppercase[Math.floor(Math.random() * uppercase.length)]);
+          //completePassword = "" + uppercase[Math.floor(Math.random() * uppercase.length)];
+          completePassword = completePassword + uppercase[Math.floor(Math.random() * uppercase.length)];
         }
         if (confirmNumeric) {
           //numeric = reWriteStats();
-          console.log(numeric[Math.floor(Math.random() * numeric.length)]);
+          //completePassword = "" + numeric[Math.floor(Math.random() * numeric.length)];
+          completePassword = completePassword + numeric[Math.floor(Math.random() * numeric.length)];
         }
         if (confirmSpecial) {
-          //speical = reWriteStats();
-          console.log(special[Math.floor(Math.random() * special.length)]);
+           // speical = reWriteStats();
+           //completePassword = "" + special[Math.floor(Math.random() * special.length)];
+           completePassword = completePassword + special[Math.floor(Math.random() * special.length)];
         }
-     }
+      }
+        console.log(completePassword);
 
-    //Character Lengths
      
-    //add all together 
+    //addd all together 
    
+   // "drewjason" + "cat" -- want to do contintinously while adding a letter 
+   
+   
+   
+   
+   //lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)] + numeric[Math.floor(Math.random() * numeric.length)] + special[Math.floor(Math.random() * special.length)];
+  
+
     //document.getElementById
 
   
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", writePassword);
 //Will need when I am ready to generate final password outline works :) 
 //generateBtn.addEventListener('click', function (event) {
    //alert('Element clicked through function!');
