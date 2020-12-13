@@ -25,43 +25,33 @@ function writePassword() {
   var special = ["~", "%", "!", "}", "{", "|", "'", "`", "_", "^", "]", "[", "/", ":", ";", "=", ">", "<", "?", "@", ".", "-", ",", "+", "*", "#", "$", "&", "("]
  
 
-    
-    if (chooseLength < 8 || chooseLength > 128) {
-      alert("Your password length does not meet security requirements!");
+   if (chooseLength < 8 || chooseLength > 128) {
+     alert("Your password length does not meet security requirements!");
     }
     
    //Password Criteria through prompt:
-      var i;  
-      for(i = 0; i < chooseLength; i++) {
-        if (confirmLowercase) {
-          completePassword = completePassword + lowercase[Math.floor(Math.random() * lowercase.length)]; 
+     var i;  
+     for(i = 0; i < chooseLength; i++) {
+       if (confirmLowercase) {
+         completePassword = completePassword + lowercase[Math.floor(Math.random() * lowercase.length)]; 
         }
 
         if (confirmUppercase) {
           completePassword = completePassword + uppercase[Math.floor(Math.random() * uppercase.length)];
-        }
+          }
 
         if (confirmNumeric) {
           completePassword = completePassword + numeric[Math.floor(Math.random() * numeric.length)];
-        }
+         }
 
-        if (confirmSpecial) {
-           completePassword = completePassword + special[Math.floor(Math.random() * special.length)];
+         if (confirmSpecial) {
+          completePassword = completePassword + special[Math.floor(Math.random() * special.length)];
+         }
         }
-      }
       alert("Your new password is: " + completePassword); 
       console.log(completePassword);
-    }    
-  
-        
-        //return generatePassword;
-        
-
-
-     //var generate1El = document.querySelectorAll(".cardbody"); 
-     //generate1El[0].children[1].childNodes[2].setAttribute(completePassword);
-     //document.getElementById
-  
+      return completePassword;
+  }    
 
  // Add event listener to generate button
  generateBtn.addEventListener("click", writePassword); 
