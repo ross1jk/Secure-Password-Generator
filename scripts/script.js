@@ -51,6 +51,10 @@ function generatePassword() {
           alert("Your password length does not meet security requirements!");
           return chooseLength + " character amount does not meet secure length requirements! Generate a new password."
         }
+        else if (completePassword === "") {
+          alert("Your password length does not meet security requirements!");
+          return "At least one character type must be selected";
+        }
         else {
         alert("Your new password is: " + newPassword); 
         return newPassword;
