@@ -10,7 +10,7 @@ function writePassword() {
 }
    
  //all this needs to go into generate password besides varibles 
- 
+ function generatePassword() {
   //Varibles 
   var completePassword = "";
   var chooseLength = prompt("How many characters do you want your password to have (must be between 8 - 128)?"); 
@@ -25,7 +25,7 @@ function writePassword() {
   var special = ["~", "%", "!", "}", "{", "|", "'", "`", "_", "^", "]", "[", "/", ":", ";", "=", ">", "<", "?", "@", ".", "-", ",", "+", "*", "#", "$", "&", "("]
  
 
-
+    
     if (chooseLength < 8 || chooseLength > 128) {
       alert("Your password length does not meet security requirements!");
     }
@@ -49,11 +49,13 @@ function writePassword() {
            completePassword = completePassword + special[Math.floor(Math.random() * special.length)];
         }
       }
-     
-    
-        console.log(completePassword);
+      alert("Your new password is: " + completePassword); 
+      console.log(completePassword);
+    }    
+  
+        
         //return generatePassword;
-        alert("Your new password is: " + completePassword); 
+        
 
 
      //var generate1El = document.querySelectorAll(".cardbody"); 
