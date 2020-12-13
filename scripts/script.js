@@ -11,7 +11,6 @@ function writePassword() {
  
 function generatePassword() {
   //Varibles 
-  
   var chooseLength = prompt("How many characters do you want your password to have (must be between 8 - 128)?"); 
   var confirmLowercase = confirm("Do you want lowercase letters?");
   var confirmUppercase = confirm("Do you want uppercase letters?");
@@ -25,10 +24,6 @@ function generatePassword() {
   var special = "~%!}{|'`_^][/:;=><?@.-+*#$&(";
   var newPassword = ""; 
 
-   if (chooseLength < 8 || chooseLength > 128) {
-     alert("Your password length does not meet security requirements!");
-    }
-    
    //Password Criteria through prompt:
      
        if (confirmLowercase) {
@@ -37,28 +32,30 @@ function generatePassword() {
 
         if (confirmUppercase) {
           completePassword = completePassword + uppercase;
-          }
+        }
 
         if (confirmNumeric) {
           completePassword = completePassword + numeric;
-         }
+        }
 
-         if (confirmSpecial) {
+        if (confirmSpecial) {
           completePassword = completePassword + special; 
-         }
+        }
         
         var i;  
         for(i = 0; i < chooseLength; i++) {
          newPassword = newPassword + completePassword[Math.floor(Math.random() * completePassword.length)]; 
         }
-
+        
+        if (newPassword.length < 8 || newPassword.length > 128) {
+          alert("Your password length does not meet security requirements!");
+          return chooseLength + " character amount does not meet secure length requirements! Generate a new password."
+        }
+        else {
         alert("Your new password is: " + newPassword); 
         return newPassword;
-      
-}    
-//length is too long, its taking at the end 
+        }
+ }
+ 
  // Add event listener to generate button
  generateBtn.addEventListener("click", writePassword); 
-
- 
-    
