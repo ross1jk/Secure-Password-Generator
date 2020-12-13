@@ -9,17 +9,12 @@ function writePassword() {
   passwordText.value = password;
 }
    
- 
- 
- 
- 
- 
  //all this needs to go into generate password besides varibles 
  
   //Varibles 
   var completePassword = "";
   var chooseLength = prompt("How many characters do you want your password to have (must be between 8 - 128)?"); 
-  var confirmLowercase = confirm("Do you want lowercase letteres?");
+  var confirmLowercase = confirm("Do you want lowercase letters?");
   var confirmUppercase = confirm("Do you want uppercase letters?");
   var confirmNumeric = confirm("Do you want numeric characters?");
   var confirmSpecial = confirm("Do you want special charactesr?");
@@ -27,16 +22,15 @@ function writePassword() {
   var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   var uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
   var numeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-  var special = ["~", "%"]
+  var special = ["~", "%", "!", "}", "{", "|", "'", "`", "_", "^", "]", "[", "/", ":", ";", "=", ">", "<", "?", "@", ".", "-", ",", "+", "*", "#", "$", "&", "("]
+ 
 
 
     if (chooseLength < 8 || chooseLength > 128) {
       alert("Your password length does not meet security requirements!");
     }
     
-
    //Password Criteria through prompt:
-    
       var i;  
       for(i = 0; i < chooseLength; i++) {
         if (confirmLowercase) {
@@ -55,18 +49,20 @@ function writePassword() {
            completePassword = completePassword + special[Math.floor(Math.random() * special.length)];
         }
       }
+     
+    
         console.log(completePassword);
         //return generatePassword;
-      alert("Your new password is: " + completePassword + " keep it same :)"); 
+        alert("Your new password is: " + completePassword); 
 
-      var generate1El = document.querySelectorAll(".cardbody"); 
-      generate1El[0].children[1].childNodes[2].setAttribute(completePassword);
-    //document.getElementById
+
+     //var generate1El = document.querySelectorAll(".cardbody"); 
+     //generate1El[0].children[1].childNodes[2].setAttribute(completePassword);
+     //document.getElementById
   
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-//Will need when I am ready to generate final password outline works :) 
-//generateBtn.addEventListener('click', function (event) {
-   //alert('Element clicked through function!');
-//});
+ // Add event listener to generate button
+ generateBtn.addEventListener("click", writePassword); 
+
+ 
+    
