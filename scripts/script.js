@@ -7,9 +7,14 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
- }
-   //all this needs to go into generate password besides varibles 
+}
+   
+ 
+ 
+ 
+ 
+ 
+ //all this needs to go into generate password besides varibles 
  
   //Varibles 
   var completePassword = "";
@@ -25,64 +30,42 @@ function writePassword() {
   var special = ["~", "%"]
 
 
-  // function 
-   //function reWriteStats() {
-    //console.log(lowercase[Math.floor(Math.random() * lowercase.length)]); + console.log(uppercase[Math.floor(Math.random() * uppercase.length)]); + console.log(numeric[Math.floor(Math.random() * numeric.length)]); + console.log(special[Math.floor(Math.random() * special.length)]);
-    //completePassword = lowercase + uppercase + numeric + special }
-    //}
-    //Password Lenght Choices:
     if (chooseLength < 8 || chooseLength > 128) {
       alert("Your password length does not meet security requirements!");
     }
-
-    //console.log(chooseLength); 
     
 
    //Password Criteria through prompt:
-      //can use an array to randomize this
     
       var i;  
       for(i = 0; i < chooseLength; i++) {
         if (confirmLowercase) {
-         // lowercase = reWriteStats();
-          //completePassword = "" + lowercase[Math.floor(Math.random() * lowercase.length)];
           completePassword = completePassword + lowercase[Math.floor(Math.random() * lowercase.length)]; 
         }
+
         if (confirmUppercase) {
-          //uppecase = reWriteStats();
-          //completePassword = "" + uppercase[Math.floor(Math.random() * uppercase.length)];
           completePassword = completePassword + uppercase[Math.floor(Math.random() * uppercase.length)];
         }
+
         if (confirmNumeric) {
-          //numeric = reWriteStats();
-          //completePassword = "" + numeric[Math.floor(Math.random() * numeric.length)];
           completePassword = completePassword + numeric[Math.floor(Math.random() * numeric.length)];
         }
+
         if (confirmSpecial) {
-           // speical = reWriteStats();
-           //completePassword = "" + special[Math.floor(Math.random() * special.length)];
            completePassword = completePassword + special[Math.floor(Math.random() * special.length)];
         }
       }
         console.log(completePassword);
+        //return generatePassword;
+      alert("Your new password is: " + completePassword + " keep it same :)"); 
 
-     
-    //addd all together 
-   
-   // "drewjason" + "cat" -- want to do contintinously while adding a letter 
-   
-   
-   
-   
-   //lowercase[Math.floor(Math.random() * lowercase.length)] + uppercase[Math.floor(Math.random() * uppercase.length)] + numeric[Math.floor(Math.random() * numeric.length)] + special[Math.floor(Math.random() * special.length)];
-  
-
+      var generate1El = document.querySelectorAll(".cardbody"); 
+      generate1El[0].children[1].childNodes[2].setAttribute(completePassword);
     //document.getElementById
-
   
 
 // Add event listener to generate button
-//generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 //Will need when I am ready to generate final password outline works :) 
 //generateBtn.addEventListener('click', function (event) {
    //alert('Element clicked through function!');
