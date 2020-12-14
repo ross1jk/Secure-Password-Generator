@@ -13,7 +13,7 @@ function generatePassword() {
   var confirmLowercase = confirm("Do you want lowercase letters?");
   var confirmUppercase = confirm("Do you want uppercase letters?");
   var confirmNumeric = confirm("Do you want numeric characters?");
-  var confirmSpecial = confirm("Do you want special charactesr?");
+  var confirmSpecial = confirm("Do you want special characters?");
   var completePassword = "";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -40,13 +40,13 @@ function generatePassword() {
          newPassword = newPassword + completePassword[Math.floor(Math.random() * completePassword.length)]; 
         }
         
-        if (newPassword.length < 8 || newPassword.length > 128) {
+        if (chooseLength < 8 || chooseLength > 128) {
           alert("Your password length does not meet security requirements!");
-          return "Your password does meet security requirements! Generate a new password.";
+          return "Your length needs to be between 8 - 128 characters. Generate a new password.";
         }
         else if (completePassword == "") {
-          alert("Your password length does not meet security requirements!");
-          return "Your password does meet security requirements! Generate a new password.";
+          alert("Your password character selection does not meet security requirements!");
+          return "Please select at least one character type. Generate a new password.";
         }
         else {
         alert("Your new password is: " + newPassword); 
