@@ -40,10 +40,23 @@ The following image shows the web application's appearance and functionality:
 ![password generator demo](./images/03-javascript-homework-demo.png)
 
 ## Folder and Document Structure and Content 
+To follow industry best practices within the Secure Password Generator repository the folder structure has been updated.
 
-  **index.html**
-  **script.js**
-  **style.css**
+  **index.html** 
+  Stands on it own, outside of any folder. This was the code provided. 
+  
+  **README.md** 
+  Stands on it own, outside of any folder.
+  
+  **images** 
+  This folder contains all the password generator demo
+
+  **scripts**
+  This folder contains script.js. This javascript file contianed event listeners and functions to connect with the index.html document provided. 
+
+  **styles** 
+  This folder contains the style.css document. This was the code provided.
+
 
 ## Javascript 
 
