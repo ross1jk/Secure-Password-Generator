@@ -58,15 +58,64 @@ To follow industry best practices within the Secure Password Generator repositor
   This folder contains the style.css document. This was the code provided.
 
 
-## Javascript 
+## JavaScript 
 
 **Varibles**
+
+I used various varibles to call upon in my JavaScript code. I may have been able use less varibles, but these are what worked best for the code and made the Secure Password Generator function the best.
+
+* Varibles Given: generateBtn, password, passwordText - all of these allowed my password to be written on the html document and were provided. 
+
+* chooseLength:
+
+* confirmLowercase:
+
+* confirmUppercase:
+
+* confirmNumeric:
+
+* confirmSpecial: 
+
+* completePassword: 
+
+* lowercase:
+
+* uppercase:
+
+* numeric:
+
+* special: 
+
+* newPassword: 
+
 **Prompts**
+
+There is one prompt given. This is to ask the user of the Secure Password Generator how many characters they choose. Based on their resposne the password generator will log the chooseLength varible and run a for loop to get a new password. This prompt is also used in conditionals to alert errors based on length choice. 
+
 **Booleans**
+
+I have four boolean questions asking the user of the Secure Password Generator what types of character they want. Based on their answer, they will go through an if condition that will help set up a randomize character selection for the password. 
+
 **Fuctions**
+
+
 **Conditionals**
+
+
 **For Loop**
+
+My for loop generates a new password by using my new completePassword string (generated through my condtionals based on booleans). Math Random is used on the string from completePassword varible. It is then added to my newPassword varible, which is set as an empty string and it equals my newPassword. Thiss will loop through as many characters are chosen from the first prompt.
+
 **Returns**
+
+I return three statements - all are accompanied with an alert.
+
+* If the length selection is too short (determined through if) and tells the user to choose a new password 
+
+* If no characters are selected (determeind through else if) and tells user to choose a new password 
+
+* If all are met, it returns the new password. 
+
 **Event Listeners**
 
 
