@@ -1,16 +1,13 @@
-# 03 JavaScript: Password Generator
+# Secure Password Generator
 
 ## Description
 
-This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+Many employees have access to sensitive data. Due to that, they require a password that will meet critera that provides high security for that data. 
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+This employee had HTML and CSS files that provided the outline and look of how they would like thier password generator to appear. JavaScript was added so now the password generator is interactive. 
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+This applicaiton, Secure Password Generator, will generate a random password based on criteria that an employee has selected no matter what screen this is deployed is on. The HTML and CSS update dymanically based on the JavaScript that was added. The user intererface is clean, polished and responsive. 
+
 ## Secure Password Generator - Deployed Application
 
 https://ross1jk.github.io/Secure-Password-Generator/ 
@@ -40,7 +37,7 @@ THEN the password is either displayed in an alert or written to the page
 
 The following image shows the web application's appearance and functionality:
 
-![password generator demo](./Assets/03-javascript-homework-demo.png)
+![password generator demo](./images/03-javascript-homework-demo.png)
 
 ## Folder and Document Structure and Content 
 
