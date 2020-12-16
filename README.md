@@ -2,11 +2,11 @@
 
 ## Description
 
-Many employees have access to sensitive data. Due to that, they require a password that will meet critera that provides high security for that data. 
+Many employees have access to sensitive data. Due to that, they require a password that will meet criteria that provides high security for that data. 
 
-This employee had HTML and CSS files that provided the outline and look of how they would like thier password generator to appear. JavaScript was added so now the password generator is interactive. 
+This employee had HTML and CSS files that provided the outline and look of how they would like their password generator to appear. JavaScript was added so now the password generator is interactive. 
 
-This applicaiton, Secure Password Generator, will generate a random password based on criteria that an employee has selected no matter what screen this is deployed is on. The HTML and CSS update dymanically based on the JavaScript that was added. The user intererface is clean, polished and responsive. 
+This application, Secure Password Generator, will generate a random password based on criteria that an employee has selected no matter what screen this is deployed is on. The HTML and CSS update dynamically based on the JavaScript that was added. The user interface is clean, polished and responsive. 
 
 ## Secure Password Generator - Deployed Application
 
@@ -52,7 +52,7 @@ To follow industry best practices within the Secure Password Generator repositor
   This folder contains all the password generator demo
 
   **scripts**
-  This folder contains script.js. This javascript file contianed event listeners and functions to connect with the index.html document provided. 
+  This folder contains script.js. This javascript file contained event listeners and functions to connect with the index.html document provided. 
 
   **styles** 
   This folder contains the style.css document. This was the code provided.
@@ -60,29 +60,29 @@ To follow industry best practices within the Secure Password Generator repositor
 
 ## JavaScript 
 
-**Fuctions**
+**Functions**
 
-There are two fucntions, both of which were provided. One is to write the password to the screen. This was not altered at all. 
+There are two functions, both of which were provided. One is to write the password to the screen. This was not altered at all. 
 
-The other is to geneerate the password. This one contains all of my code created to make the Secure Password Generator interactive. 
+The other is to generate the password. This one contains all of my code created to make the Secure Password Generator interactive. 
 
-**Varibles**
+**Variables**
 
-I used various varibles to call upon in my JavaScript code. I may have been able use less varibles, but these are what worked best for the code and made the Secure Password Generator function the best.
+I used various variables to call upon in my JavaScript code. I may have been able use less variables, but these are what worked best for the code and made the Secure Password Generator function the best.
 
-* Varibles Given: generateBtn, password, passwordText - all of these allowed my password to be written on the html document and were provided. 
+* Variables Given: generateBtn, password, passwordText - all of these allowed my password to be written on the html document and were provided. 
 
 * chooseLength: created to generate a prompt and store that prompts answer. This is used in my for loops and return statements later. 
 
-* confirmLowercase: Allows the user to select if they want lowercase letters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
+* confirmLowercase: Allows the user to select if they want lowercase letters through a boolean statement. Used in my first set of conditionals to set my completePassword String. 
 
-* confirmUppercase: Allows the user to select if they want uppercase letters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
+* confirmUppercase: Allows the user to select if they want uppercase letters through a boolean statement. Used in my first set of conditionals to set my completePassword String. 
 
-* confirmNumeric: Allows the user to select if they want numeric characters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
+* confirmNumeric: Allows the user to select if they want numeric characters through a boolean statement. Used in my first set of conditionals to set my completePassword String. 
 
-* confirmSpecial: Allows the user to select if they want special characters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
+* confirmSpecial: Allows the user to select if they want special characters through a boolean statement. Used in my first set of conditionals to set my completePassword String. 
 
-* completePassword: Set as empty. Based on boolean statment answers, will generate a string, that will be used in a math radom fucntion in for loop. 
+* completePassword: Set as empty. Based on boolean statement answers, will generate a string, that will be used in a math random function in for loop. 
 
 * lowercase: Contains all lowercase letter characters as a string. 
 
@@ -90,27 +90,27 @@ I used various varibles to call upon in my JavaScript code. I may have been able
 
 * numeric: Contains all numeric characters as a string. 
 
-* special: Contains all special chacaters as a string. 
+* special: Contains all special characters as a string. 
 
-* newPassword: This is an empty string used in my for loop and in my returns. This string fills in my for loop and is returned at the end of my function. If contions are met, this will be displayed on index.html. 
+* newPassword: This is an empty string used in my for loop and in my returns. This string fills in my for loop and is returned at the end of my function. If conditions are met, this will be displayed on index.html. 
 
 **Prompts**
 
-There is one prompt given. This is to ask the user of the Secure Password Generator how many characters they choose. Based on their resposne the password generator will log the chooseLength varible and run a for loop to get a new password. This prompt is also used in conditionals to alert errors based on length choice. 
+There is one prompt given. This is to ask the user of the Secure Password Generator how many characters they choose. Based on their response the password generator will log the chooseLength variable and run a for loop to get a new password. This prompt is also used in conditionals to alert errors based on length choice. 
 
 **Booleans**
 
-I have four boolean questions asking the user of the Secure Password Generator what types of character they want. Based on their answer, they will go through an if condition that will help set up a randomize character selection for the password. 
+I have four boolean questions asking the user of the Secure Password Generator what types of character they want. Based on their answer, they will go through an if condition that will help set up a random character selection for the password. 
 
 **Conditionals**
 
-* I have four contionals that work off of my booleans - these contionals will add their matching string (ex: confirmLower case and lowercase) to the completePassword string which is needed for the for loop. If one of the choices is not selected nothing happens, it stays out of the completePassword varible.
+* I have four conditionals that work off of my booleans - these conditionals will add their matching string (ex: confirmLower case and lowercase) to the completePassword string which is needed for the for loop. If one of the choices is not selected nothing happens, it stays out of the completePassword variable.
 
-* I have three varibles that help return my passsord. One looks at my length, so that if my lenght is not between 8 - 128 an error message is returend. One is so that if no characters are selected an error message is returned. The last is to return the new password if the other two are not true. 
+* I have three variables that help return my password. One looks at my length, so that if my length is not between 8 - 128 an error message is returned. One is so that if no characters are selected an error message is returned. The last is to return the new password if the other two are not true. 
 
 **For Loop**
 
-My for loop generates a new password by using my new completePassword string (generated through my condtionals based on booleans). Math Random is used on the string from completePassword varible. It is then added to my newPassword varible, which is set as an empty string and it equals my newPassword. Thiss will loop through as many characters are chosen from the first prompt.
+My for loop generates a new password by using my new completePassword string (generated through my conditionals based on booleans). Math Random is used on the string from completePassword variable. It is then added to my newPassword variable, which is set as an empty string and it equals my newPassword. This will loop through as many characters are chosen from the first prompt.
 
 **Returns**
 
@@ -118,13 +118,13 @@ I return three statements - all are accompanied with an alert.
 
 * If the length selection is too short (determined through if) and tells the user to choose a new password 
 
-* If no characters are selected (determeind through else if) and tells user to choose a new password 
+* If no characters are selected (determined through else if) and tells user to choose a new password 
 
 * If all are met, it returns the new password. 
 
 **Event Listeners**
 
-This code was provided, and was not altered. When the button on index.html is clicked, the user will go through the questions asked about what they would like in thier password, and then the password will gnerate. 
+This code was provided, and was not altered. When the button on index.html is clicked, the user will go through the questions asked about what they would like in their password, and then the password will generate. 
 
 
 
