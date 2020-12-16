@@ -127,13 +127,6 @@ I return three statements - all are accompanied with an alert.
 This code was provided, and was not altered. When the button on index.html is clicked, the user will go through the questions asked about what they would like in thier password, and then the password will gnerate. 
 
 
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-
-* Application loads with no errors.
-
 
 - - -
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
