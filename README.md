@@ -60,33 +60,39 @@ To follow industry best practices within the Secure Password Generator repositor
 
 ## JavaScript 
 
+**Fuctions**
+
+There are two fucntions, both of which were provided. One is to write the password to the screen. This was not altered at all. 
+
+The other is to geneerate the password. This one contains all of my code created to make the Secure Password Generator interactive. 
+
 **Varibles**
 
 I used various varibles to call upon in my JavaScript code. I may have been able use less varibles, but these are what worked best for the code and made the Secure Password Generator function the best.
 
 * Varibles Given: generateBtn, password, passwordText - all of these allowed my password to be written on the html document and were provided. 
 
-* chooseLength:
+* chooseLength: created to generate a prompt and store that prompts answer. This is used in my for loops and return statements later. 
 
-* confirmLowercase:
+* confirmLowercase: Allows the user to select if they want lowercase letters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
 
-* confirmUppercase:
+* confirmUppercase: Allows the user to select if they want uppercase letters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
 
-* confirmNumeric:
+* confirmNumeric: Allows the user to select if they want numeric characters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
 
-* confirmSpecial: 
+* confirmSpecial: Allows the user to select if they want special characters through a boolean statment. Used in my first set of contionals to set my completePassword String. 
 
-* completePassword: 
+* completePassword: Set as empty. Based on boolean statment answers, will generate a string, that will be used in a math radom fucntion in for loop. 
 
-* lowercase:
+* lowercase: Contains all lowercase letter characters as a string. 
 
-* uppercase:
+* uppercase: Contains all uppercase letter characters as a string. 
 
-* numeric:
+* numeric: Contains all numeric characters as a string. 
 
-* special: 
+* special: Contains all special chacaters as a string. 
 
-* newPassword: 
+* newPassword: This is an empty string used in my for loop and in my returns. This string fills in my for loop and is returned at the end of my function. If contions are met, this will be displayed on index.html. 
 
 **Prompts**
 
@@ -96,11 +102,11 @@ There is one prompt given. This is to ask the user of the Secure Password Genera
 
 I have four boolean questions asking the user of the Secure Password Generator what types of character they want. Based on their answer, they will go through an if condition that will help set up a randomize character selection for the password. 
 
-**Fuctions**
-
-
 **Conditionals**
 
+* I have four contionals that work off of my booleans - these contionals will add their matching string (ex: confirmLower case and lowercase) to the completePassword string which is needed for the for loop. If one of the choices is not selected nothing happens, it stays out of the completePassword varible.
+
+* I have three varibles that help return my passsord. One looks at my length, so that if my lenght is not between 8 - 128 an error message is returend. One is so that if no characters are selected an error message is returned. The last is to return the new password if the other two are not true. 
 
 **For Loop**
 
@@ -118,56 +124,17 @@ I return three statements - all are accompanied with an alert.
 
 **Event Listeners**
 
+This code was provided, and was not altered. When the button on index.html is clicked, the user will go through the questions asked about what they would like in thier password, and then the password will gnerate. 
 
 
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
 
   * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
 
 ### Deployment: 32%
 
-* Application deployed at live URL.
 
 * Application loads with no errors.
 
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
-
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
 
 - - -
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
